@@ -45,5 +45,6 @@ return [
     'local das chaves' => 'AP',
     'cadastrado em' => 'AQ',
     'descrição do site' => 'AR',
-    'descrição interna' => 'AS'
+    'finalidade' => 'AS',
+    'descrição interna' => 'AT'
 ];
