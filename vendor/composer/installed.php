@@ -1,19 +1,28 @@
 <?php return array(
     'root' => array(
         'name' => 'faacarneiro/crawler_imoveis_fabi',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '3ebfe8f980229795b741eb25d1812435c0f65f60',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'faacarneiro/crawler_imoveis_fabi' => array(
-            'pretty_version' => '1.0.0+no-version-set',
+        'avlima/php-cpf-cnpj-generator' => array(
+            'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
-            'reference' => NULL,
+            'reference' => '2da524f3e7933c37314404f7a7805720d0edd298',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../avlima/php-cpf-cnpj-generator',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'faacarneiro/crawler_imoveis_fabi' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '3ebfe8f980229795b741eb25d1812435c0f65f60',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

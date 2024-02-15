@@ -21,5 +21,6 @@ return array(
     'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
     'Faacarneiro\\CrawlerImoveisFabi\\' => array($baseDir . '/src'),
     'Complex\\' => array($vendorDir . '/markbaker/complex/classes/src'),
+    'Avlima\\PhpCpfCnpjGenerator\\' => array($vendorDir . '/avlima/php-cpf-cnpj-generator/src'),
     'App\\' => array($baseDir . '/src/app'),
 );

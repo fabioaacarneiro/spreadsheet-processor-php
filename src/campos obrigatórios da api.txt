@@ -1,0 +1,101 @@
+codigousuario: OBRIGATÓRIO - Usuário do Imoview CRM
+-> codigounidade: OBRIGATÓRIO - Enviar o código da unidade selecionada de acordo com a lista existente (RetornarListaUnidades)
+-> finalidade: OBRIGATÓRIO - Enviar a finalidade selecionada de acordo com a lista existente (RetornarListaFinalidades)
+-> destinacao: OBRIGATÓRIO - Enviar a destinação selecionada de acordo com a lista existente (RetornarListaDestinacoes)
+-> codigotipo: OBRIGATÓRIO - Enviar o tipo de imóvel selecionado de acordo com a lista existente (RetornarTiposImoveisDisponiveis)
+-> localchave: OBRIGATÓRIO - Enviar a destinação selecionada de acordo com a lista existente (RetornarListaLocalChaves)
+-> valor: OBRIGATÓRIO - Enviar o valor de venda ou aluguel
+-> areainterna: OBRIGATÓRIO - Enviar a área interna
+-> rua: OBRIGATÓRIO - Enviar o nome da rua
+-> bairro: OBRIGATÓRIO - Enviar o nome do bairro
+-> cidade: OBRIGATÓRIO - Enviar o nome da cidade
+-> estado: OBRIGATÓRIO - Enviar a sigla do estado
+descricao: OBRIGATÓRIO - Enviar descrição das características do imóvel
+-> nome: OBRIGATÓRIO - Enviar o nome do proprietário
+-> cpfoucnpj: OBRIGATÓRIO - Enviar CPF ou CNPJ do proprietário
+-> telefone: OBRIGATÓRIO - Enviar telefone
+-> percentual: OBRIGATÓRIO - Enviar o % de participação no imóvel
+
+x2wGNb/MN+NSnynLyOcN8fHa4mxouBUj8g/bbTYPIDw=4957
+
+x2wGNb/MN+NSnynLyOcN8fHa4mxouBUj8g/bbTYPIDw=
+
+{
+    "quantidade": 9,
+    "lista": [
+        {
+            "codigo": 2,
+            "nome": "Apartamento"
+        },
+        {
+            "codigo": 20,
+            "nome": "Área"
+        },
+        {
+            "codigo": 1,
+            "nome": "Casa"
+        },
+        {
+            "codigo": 16,
+            "nome": "Chácara"
+        },
+        {
+            "codigo": 18,
+            "nome": "Cobertura"
+        },
+        {
+            "codigo": 19,
+            "nome": "Galpão"
+        },
+        {
+            "codigo": 6,
+            "nome": "Sala"
+        },
+        {
+            "codigo": 23,
+            "nome": "Studio"
+        },
+        {
+            "codigo": 3,
+            "nome": "Terreno"
+        }
+    ]
+}
+
+{
+    "quantidade": 8,
+    "lista": [
+        {
+            "codigo": "1",
+            "nome": "Residencial"
+        },
+        {
+            "codigo": "2",
+            "nome": "Comercial"
+        },
+        {
+            "codigo": "3",
+            "nome": "Residencial/Comercial"
+        },
+        {
+            "codigo": "4",
+            "nome": "Industrial"
+        },
+        {
+            "codigo": "5",
+            "nome": "Rural"
+        },
+        {
+            "codigo": "6",
+            "nome": "Temporada"
+        },
+        {
+            "codigo": "7",
+            "nome": "Corporativa"
+        },
+        {
+            "codigo": "8",
+            "nome": "Comercial/Industrial"
+        }
+    ]
+}

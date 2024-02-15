@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title"
+    },
+    {
+      "id": "2",
+      "title": "another task"
+    },
+    {
+      "id": "2",
+      "title": "another task"
+    },
+    {
+      "id": "2",
+      "title": "another task"
+    },
+    {
+      "id": "2",
+      "title": "another task"
+    },
+    {
+      "id": "2",
+      "title": "another task"
+    },
+    {
+      "id": "2",
+      "title": "another task"
+    }
+  ]
+}

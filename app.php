@@ -1,5 +1,7 @@
 <?php
 
+use Avlima\PhpCpfCnpjGenerator\Generator;
+
 require 'vendor/autoload.php';
 require 'src/app/XLSXDriver.php';
 require 'src/app/Sheet.php';
@@ -28,20 +30,29 @@ Sheet::lineEach($sheet, function ($row) use ($sheet, $columnNames) {
     echo $corretor;
 });
 
-$curl = curl_init();
+// $curl = curl_init();
 
-curl_setopt_array($curl, [
-    CURLOPT_URL => '',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => '',
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 10,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => [
-        'campo da api' => 'valor a ser enviado',
-    ]
-]);
+// curl_setopt_array($curl, [
+//     CURLOPT_URL => '',
+//     CURLOPT_RETURNTRANSFER => true,
+//     CURLOPT_ENCODING => '',
+//     CURLOPT_MAXREDIRS => 10,
+//     CURLOPT_TIMEOUT => 10,
+//     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//     CURLOPT_CUSTOMREQUEST => 'POST',
+//     CURLOPT_POSTFIELDS => [
+//         'campo da api' => 'valor a ser enviado',
+//     ]
+// ]);
 
-$response = curl_exec($curl);
-var_dump($response);
+// $response = curl_exec($curl);
+// var_dump($response);
+
+echo PHP_EOL;
+
+// $newCpf = CPFGen::generate();
+$newCPF = Generator::cpf();
+
+print_r($newCPF);
+
+echo PHP_EOL;
