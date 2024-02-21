@@ -4,6 +4,6 @@
 
 ### Este projeto é um projeto para exemplificação da aplicabilidade do PHP em automações com processos repetitivos em massa para fins de estudo!
 
-**Agradecimento especial ao [Douglas Massolari](https://github.com/Massolari) por ter colaborado com conceitos de *programação funcional* e com a construção do arquivo *Sheet.php*, sua implementação e todo ensinamento compartilhado, corroborando para o meu crescimento pessal e profissional.**
+**Agradecimento especial ao [Douglas Massolari](https://github.com/Massolari) por ter colaborado com conceitos de *programação funcional* e com a construção do arquivo *Sheet.php*, sua implementação e todo ensinamento compartilhado, corroborando para o meu crescimento pessoal e profissional.**
 
 ## Fabio Carneiro
