@@ -50,6 +50,7 @@ Sheet::lineEach($sheet, function ($row) use ($sheet, $columnNames) {
         "descricao" => "Inclusão dos imóveis via automação - Fabio Carneiro"
     ];
 
+    // print_r(); pode ser substituído pelo método estático de requisição para a API.
     print_r(json_encode($requestBody, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
     echo PHP_EOL;
