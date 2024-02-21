@@ -47,7 +47,7 @@ Sheet::lineEach($sheet, function ($row) use ($sheet, $columnNames) {
                 "percentual" => 100
             ]
         ],
-        "descricao" => "Inclusão dos imóveis da Fabi"
+        "descricao" => "Inclusão dos imóveis via automação - Fabio Carneiro"
     ];
 
     print_r(json_encode($requestBody, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
