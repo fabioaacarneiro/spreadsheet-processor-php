@@ -3,7 +3,6 @@
 use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
-require 'src/app/XLSXDriver.php';
 require 'src/app/Sheet.php';
 
 $dotenv = Dotenv::createImmutable(__DIR__);
@@ -14,10 +13,10 @@ $dotenv->load();
 $sheet = Sheet::from('./src/database/database.xlsx', 'principal');
 $columnNames = Sheet::getColumnNames($sheet);
 
-function currencyToInteger($stringCurrency): int
+function currencyToInteger(string $currency): int
 {
-    $number = preg_replace('/[^0-9,.]/', '', $stringCurrency);
-    $number = str_replace(',', '', $number);
+    $number = str_replace(['.', ',00'], '', $currency);
+    $number = preg_replace('/[^0-9.]/', '', $number);
     $number = (int) $number;
     return $number;
 }
