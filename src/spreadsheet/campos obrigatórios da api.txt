@@ -16,9 +16,6 @@ descricao: OBRIGATÓRIO - Enviar descrição das características do imóvel
 -> telefone: OBRIGATÓRIO - Enviar telefone
 -> percentual: OBRIGATÓRIO - Enviar o % de participação no imóvel
 
-x2wGNb/MN+NSnynLyOcN8fHa4mxouBUj8g/bbTYPIDw=4957
-
-x2wGNb/MN+NSnynLyOcN8fHa4mxouBUj8g/bbTYPIDw=
 
 {
     "quantidade": 9,
