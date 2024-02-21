@@ -1,5 +1,5 @@
 .env
-spreadsheet/database.xlsx
+src/spreadsheet/database.xlsx
 vendor
 db.json
 request-example.json
