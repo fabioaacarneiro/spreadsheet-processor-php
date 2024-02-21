@@ -1,0 +1,31 @@
+{
+    "codigousuario": 472,
+    "codigounidade": 6224,
+    "finalidade": 1,
+    "destinacao": 2,
+    "codigotipo": 2,
+    "localchave": 1,
+    "valores": {
+        "valor": 5000
+    },
+    "areas": {
+        "areainterna": 150
+    },
+    "endereco": {
+        "rua": "Rua de teste",
+        "bairro": "teste",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "numero": 999
+    },
+    "proprietarios": [
+        {
+            "nome": "Matheus Vinicius",
+            "cpf": "99999999999",
+            "telefone": "31999999999",
+            "email": "matheusteste@gmail.com",
+            "percentual": 100
+        }
+    ],
+    "descricao": "Inclusão de teste pela API"
+}

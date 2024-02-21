@@ -41,7 +41,7 @@ abstract class Sheet
             $callback($row);
 
             // Vou dar um break aqui para ele executar só uma vez para teste
-            break;
+            // break;
         }
     }
 
@@ -53,7 +53,7 @@ abstract class Sheet
             // Pegamos o valor da célula pelas cordenadas
             // O índice da coluna pegamos do array de colunas que geramos em `getColumnNames`
             // O índice da linha pegamos de $row->getRowIndex()
-            return $sheet->getCell($columns[$name] . $row->getRowIndex());
+            return $sheet->getCell($columns[$name] . $row->getRowIndex())->getValue();
         };
     }
 }

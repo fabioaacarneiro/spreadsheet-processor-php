@@ -1,58 +1,64 @@
 <?php
 
-use Avlima\PhpCpfCnpjGenerator\Generator;
+use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
 require 'src/app/XLSXDriver.php';
 require 'src/app/Sheet.php';
 
-$driver = new XLSXDriver('./src/database.xlsx', 'principal');
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-echo $driver->getCellValue('codigo', 3);
-echo "\n";
+// var_dump(getenv("URL_API"));
 
-// ---
+$curl = curl_init();
 
-// Criamos a planilha
-$sheet = Sheet::from('./src/database.xlsx', 'principal');
-// Pegamos os nomes das colunas
-// $columnNames = Sheet::getColumnNames($sheet);
-$columnNames = include './src/assets/columns.php';
+curl_setopt($curl, CURLOPT_URL, '');
+
+$sheet = Sheet::from('./src/database/database.xlsx', 'principal');
+$columnNames = Sheet::getColumnNames($sheet);
+
+function currencyToInteger($stringCurrency): int
+{
+    $number = preg_replace('/[^0-9,.]/', '', $stringCurrency);
+    $number = str_replace(',', '', $number);
+    $number = (int) $number;
+    return $number;
+}
 
 // Para cada linha, vamos pegar os dados que queremos
 Sheet::lineEach($sheet, function ($row) use ($sheet, $columnNames) {
-    // Inicializamos a função que vai buscar os valores passando os valores iniciais
-    // $cellGetter é uma função que só precisa receber o nome da coluna
+
     $cellGetter = Sheet::cellGetter($sheet, $row, $columnNames);
 
-    // Usamos $cellGetter para obter os valores
-    $corretor = $cellGetter('corretor');
-    echo $corretor;
+    $requestBody = [
+        "codigousuario" => 472,
+        "codigounidade" => 6224,
+        "finalidade" => $cellGetter("codigofinalidade"),
+        "destinacao" => $cellGetter("codigodestinacao"),
+        "codigotipo" => $cellGetter("tipoimovel"),
+        "localchave" => $cellGetter("codigolocalchave"),
+        "valores" => [
+            "valor" => currencyToInteger($cellGetter("valor")),
+        ],
+        "endereco" => [
+            "rua" => $cellGetter("endereco"),
+            "bairro" => $cellGetter("bairro"),
+            "cidade" => $cellGetter("cidade"),
+            "estado" => $cellGetter("estado"),
+        ],
+        "proprietarios" => [
+            [
+                "nome" => $cellGetter("proprietario"),
+                "telefone" => $cellGetter("telefoneproprietario"),
+                "email" => $cellGetter("emailproprietario"),
+                "percentual" => 100
+            ]
+        ],
+        "descricao" => "Inclusão dos imóveis da Fabi"
+    ];
+
+    print_r(json_encode($requestBody, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+    echo PHP_EOL;
 });
-
-// $curl = curl_init();
-
-// curl_setopt_array($curl, [
-//     CURLOPT_URL => '',
-//     CURLOPT_RETURNTRANSFER => true,
-//     CURLOPT_ENCODING => '',
-//     CURLOPT_MAXREDIRS => 10,
-//     CURLOPT_TIMEOUT => 10,
-//     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-//     CURLOPT_CUSTOMREQUEST => 'POST',
-//     CURLOPT_POSTFIELDS => [
-//         'campo da api' => 'valor a ser enviado',
-//     ]
-// ]);
-
-// $response = curl_exec($curl);
-// var_dump($response);
-
-echo PHP_EOL;
-
-// $newCpf = CPFGen::generate();
-$newCPF = Generator::cpf();
-
-print_r($newCPF);
-
-echo PHP_EOL;

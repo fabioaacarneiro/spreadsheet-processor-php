@@ -1,8 +1,9 @@
 <?php
 
 $chaveApi = "x2wGNb/MN+NSnynLyOcN8fHa4mxouBUj8g/bbTYPIDw=";
-$public_key = "chave";
-// "chave" => "x2wGNb/MN+NSnynLyOcN8fHa4mxouBUj8g/bbTYPIDw=",
+$publicKey = "chave";
+$cnpj = "19.865.230/0001-41";
+$userCode = 472;
 
 $apiRoute = "https://api.imoview.com.br";
 
@@ -16,7 +17,7 @@ $urlsImoveiwGET = [
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => $apiRoute . $urlsImoveiwGET["localchave"],
+    CURLOPT_URL => $apiRoute . $urlsImoveiwGET["tipo"],
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -30,8 +31,6 @@ curl_setopt_array($curl, [
 ]);
 
 $response = json_decode(curl_exec($curl));
-
-
 
 // var_dump($response);
 echo "\n";
