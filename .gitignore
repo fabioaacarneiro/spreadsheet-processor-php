@@ -1,5 +1,6 @@
 .env
 database/*
+vendor
 db.json
 request-example.json
 requestAPIImoview.php
