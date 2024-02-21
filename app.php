@@ -11,10 +11,6 @@ $dotenv->load();
 
 // var_dump(getenv("URL_API"));
 
-$curl = curl_init();
-
-curl_setopt($curl, CURLOPT_URL, '');
-
 $sheet = Sheet::from('./src/database/database.xlsx', 'principal');
 $columnNames = Sheet::getColumnNames($sheet);
 
@@ -32,8 +28,8 @@ Sheet::lineEach($sheet, function ($row) use ($sheet, $columnNames) {
     $cellGetter = Sheet::cellGetter($sheet, $row, $columnNames);
 
     $requestBody = [
-        "codigousuario" => 472,
-        "codigounidade" => 6224,
+        "codigousuario" => $_ENV["USER_CODE"],
+        "codigounidade" => $_ENV["UNIT_CODE"],
         "finalidade" => $cellGetter("codigofinalidade"),
         "destinacao" => $cellGetter("codigodestinacao"),
         "codigotipo" => $cellGetter("tipoimovel"),
