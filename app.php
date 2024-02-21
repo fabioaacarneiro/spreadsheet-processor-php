@@ -8,9 +8,7 @@ require 'src/app/Sheet.php';
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// var_dump(getenv("URL_API"));
-
-$sheet = Sheet::from('./src/database/database.xlsx', 'principal');
+$sheet = Sheet::from('./src/spreadsheet/database.xlsx', 'principal');
 $columnNames = Sheet::getColumnNames($sheet);
 
 function currencyToInteger(string $currency): int
@@ -21,7 +19,6 @@ function currencyToInteger(string $currency): int
     return $number;
 }
 
-// Para cada linha, vamos pegar os dados que queremos
 Sheet::lineEach($sheet, function ($row) use ($sheet, $columnNames) {
 
     $cellGetter = Sheet::cellGetter($sheet, $row, $columnNames);

@@ -1,0 +1,6 @@
+.env
+database/*
+db.json
+request-example.json
+requestAPIImoview.php
+requestToJsonServer.php
